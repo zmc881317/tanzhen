@@ -1,0 +1,13 @@
+name = "tanzhen"
+main = "src/index.js"
+compatibility_date = "2026-06-05"
+
+# 告诉 Cloudflare 该项目需要一个 D1 数据库，绑定名称必须是 DB
+[[d1_databases]]
+binding = "DB"
+database_name = "monitor_db" # 默认数据库名称，用户可以在部署向导中新建或修改
+database_id = "7f00d65d-ee4e-4947-b207-9e982def925f" # 留空即可，一键部署时向导会自动处理
+
+# 告诉 Cloudflare 该项目需要环境变量，部署向导会提示用户填写
+[vars]
+API_SECRET = "Zmc881317" # 默认探针通信密钥和后台管理密码
